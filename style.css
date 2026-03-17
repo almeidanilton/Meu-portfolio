@@ -757,98 +757,63 @@ strong { font-weight: 500; }
   gap: 28px;
 }
 
-@media (max-width: 900px) {
-  .skills-grid { grid-template-columns: 1fr; }
-}
+@media (max-width: 768px) {
 
-.skill-group {
-  background: var(--bg2);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 28px;
-}
-.skill-group-soft { background: var(--surface2); }
+  .projetos-slider-wrapper {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    position: relative;
+  }
 
-.skill-group-title {
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--text);
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.skill-icon { font-size: 18px; }
+  .projetos-slider {
+    width: 100%;
+  }
 
-.skill-bar-item {
-  margin-bottom: 12px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid var(--border);
-}
-.skill-bar-item:last-child {
-  border-bottom: none;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-.skill-bar-label {
-  display: flex;
-  justify-content: space-between;
-  font-size: 13px;
-  color: var(--text-muted);
-  margin-bottom: 6px;
-}
-.skill-level { font-size: 11px; color: var(--text-muted); }
-.skill-bar-bg {
-  height: 6px;
-  background: var(--surface2);
-  border-radius: 99px;
-  overflow: hidden;
-}
-.skill-bar-fill {
-  height: 100%;
-  width: 0;
-  background: linear-gradient(90deg, var(--accent2), var(--accent));
-  border-radius: 99px;
-  transition: width 1s cubic-bezier(0.4,0,0.2,1);
-}
-.skill-bar-fill.animated { width: var(--w); }
+  .scroll-btn {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
 
-.skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
-.skill-tag {
-  font-size: 12px;
-  padding: 5px 12px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  color: var(--text-muted);
-  border-radius: 8px;
-  transition: var(--transition);
-}
-.skill-tag:hover { border-color: var(--border-accent); color: var(--accent); }
-.skill-tag.studying {
-  background: rgba(110,231,183,0.08);
-  border-color: var(--border-accent);
-  color: var(--accent);
-}
+    width: 42px;
+    height: 42px;
 
-.soft-skills { display: flex; flex-direction: column; gap: 20px; }
-.soft-skill {
-  display: flex;
-  gap: 14px;
-  align-items: flex-start;
+    font-size: 24px;
+
+    background: rgba(22, 22, 31, 0.92);
+    backdrop-filter: blur(8px);
+
+    border: 1px solid var(--border-accent);
+  }
+
+  .scroll-left {
+    left: 8px;
+  }
+
+  .scroll-right {
+    right: 8px;
+  }
+
+  .projeto-card {
+    padding: 24px;
+    border-radius: 18px;
+  }
+
+  .projeto-title {
+    font-size: 2rem;
+  }
+
+  .projeto-desc {
+    max-width: 100%;
+    font-size: 0.95rem;
+  }
+
+  .projeto-focus {
+    font-size: 0.9rem;
+  }
+
 }
-.soft-icon {
-  font-size: 20px;
-  width: 40px;
-  height: 40px;
-  background: var(--accent-dim);
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-.soft-skill strong { display: block; font-size: 14px; color: var(--text); margin-bottom: 4px; }
-.soft-skill p { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
 
 /* ========================
    CONTATO
