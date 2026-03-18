@@ -1,6 +1,6 @@
 ## 🚀 Sobre mim
 
-Sou o José, em transição da Odontologia Digital para a área de Tecnologia.
+Sou o José, profissional em transição da Odontologia Digital para a área de Tecnologia.
 
 Atuei com fluxo digital, automações e organização de dados em ambientes de alta precisão — experiência que despertou meu interesse por desenvolvimento.
 
@@ -22,7 +22,7 @@ Aqui você vai encontrar projetos voltados para:
 
 ## ⚙️ Destaque
 
-Desenvolvimento de um sistema em **Java para organização automatizada de arquivos**, com regras específicas e preparado para evolução com integração em nuvem.
+Desenvolvimento de um sistema em **Java para organização automatizada de arquivos**, com regras específicas, foco em eficiência e preparado para evolução com integração em nuvem.
 
 ---
 
@@ -43,5 +43,4 @@ Este portfólio representa minha evolução na tecnologia.
 
 Novos projetos, integrações com Cloud e aplicações com IA serão adicionados continuamente.
 
-🚀 Sempre evoluindo.
-
+🚀 Em constante evolução.
