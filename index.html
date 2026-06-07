@@ -3,95 +3,442 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de José Nilton, desenvolvedor em transição de carreira. Veja meus projetos em HTML, CSS, JavaScript e mais.">
-    <meta name="keywords" content="portfolio, desenvolvedor, HTML, CSS, JavaScript, Java, Python">
+    <meta name="description" content="Portfólio de José Nilton - Desenvolvedor em Formação. Mobile Development, Cloud Computing, Cybersecurity e AI Solutions.">
+    <meta name="keywords" content="portfolio, desenvolvedor, mobile, cloud, cybersecurity, ai, java, react, typescript">
     <meta name="author" content="José Nilton">
-    <title>Portfolio - José Nilton</title>
+    <meta name="theme-color" content="#667eea">
+    <title>José Nilton — Desenvolvedor em Formação</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Header com Navegação -->
     <header>
         <nav>
             <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#sobre">Sobre Mim</a></li>
+                <li><a href="#inicio">JN.</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#trajetoria">Trajetória</a></li>
                 <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#habilidades">Skills</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+        <!-- HERO SECTION -->
         <section id="inicio">
-            <h1>Olá Rede! Prazer José Nilton</h1>
-            <p>Aqui você encontra meus projetos, minha evolução e minha jornada na tecnologia.</p>
+            <div class="hero-badge">
+                <i class="fas fa-circle" style="font-size: 0.5rem; margin-right: 8px;"></i>
+                Disponível para oportunidades
+            </div>
+            
+            <h1>José Nilton</h1>
+            
+            <p>Desenvolvedor em Formação</p>
+            <p style="font-size: 1.1rem; color: var(--accent-color); font-weight: 500; margin-bottom: 2rem;">
+                📱 Mobile Development • ☁️ Cloud Computing • 🔒 Cybersecurity • 🤖 AI Solutions
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
+                <a href="#contato" class="btn btn-secondary">Falar Comigo</a>
+            </div>
+
+            <div class="hero-social">
+                <a href="https://github.com/almeidanilton" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/jos%C3%A9-nilton-a1b8b6280/" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.instagram.com/_jniltonn/" target="_blank" rel="noopener noreferrer" class="social-link" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+
+            <div class="scroll-indicator">
+                <i class="fas fa-chevron-down"></i>
+                <div style="font-size: 0.8rem;">scroll</div>
+            </div>
+
+            <!-- Canvas para elemento 3D -->
+            <canvas id="canvas3d" style="position: absolute; right: 10%; top: 50%; transform: translateY(-50%); width: 300px; height: 300px; opacity: 0.8;"></canvas>
         </section>
 
+        <!-- SEÇÃO SOBRE -->
         <section id="sobre">
-            <h2>Sobre Mim</h2>
-            <p>Sou o José e estou construindo minha jornada na tecnologia com propósito. Vim da área de Odontologia Digital, onde atuava na parte técnica e estética, sempre trabalhando com processos digitais. Essa experiência me aproximou da tecnologia, mas foi na TI que realmente me encontrei.
-Desde então, transformo ideias em soluções práticas: planilhas inteligentes que automatizam rotinas, sistemas de controle, dashboards, sites e ferramentas que facilitam o dia a dia das pessoas. Participei da Imersão Dev da Alura + Google, onde desenvolvi projetos que fortaleceram minha lógica e minha paixão por transformar dados e código em algo útil.</p>
-            <h3>Áreas de Interesse: Full Stack - Dados & Automação</h3>
-            <p>Sou José, profissional em transição para a área de Tecnologia, com background em Odontologia Digital e sólida experiência em processos digitais. Encontrei na TI a oportunidade de transformar ideias em soluções práticas, desenvolvendo sistemas, automações, dashboards, sites e ferramentas voltadas à otimização de rotinas e geração de valor.
-Participei da Imersão Dev da Alura em parceria com o Google, onde fortaleci minha lógica de programação, pensamento analítico e a aplicação de dados e código na resolução de problemas reais.</p>
-            <p>Minhas habilidades incluem:</p>
+            <h2>Uma trajetória <span style="color: var(--accent-color);">diferente</span></h2>
+            
+            <p>
+                Comecei minha trajetória na <span class="about-highlight">Odontologia Digital</span>, trabalhando com softwares CAD/CAM, automações e fluxos digitais em ambiente de produção.
+            </p>
+            
+            <p>
+                Foi nesse processo que descobri minha verdadeira conexão com <span class="about-highlight">tecnologia</span> e desenvolvimento de software.
+            </p>
+            
+            <p>
+                Hoje curso <span class="about-highlight">Análise e Desenvolvimento de Sistemas</span> na Universidade São Judas Tadeu, com foco em <span class="about-highlight">Mobile Development, Cloud Computing, Cybersecurity e AI Solutions</span>.
+            </p>
+            
+            <p>
+                Minha experiência anterior me trouxe uma visão prática de processos reais e da forma como a tecnologia pode transformar operações, otimizar fluxos e criar soluções mais eficientes.
+            </p>
+
+            <!-- Estatísticas -->
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-number">+5</div>
+                    <div class="stat-label">Anos em ambientes digitais</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">25%</div>
+                    <div class="stat-label">Redução de erros com automações</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Projetos reais em desenvolvimento</div>
+                </div>
+            </div>
+
+            <!-- Skills -->
+            <h3 style="margin-top: 3rem; margin-bottom: 1.5rem;">Principais Tecnologias</h3>
             <div class="skills-container">
-                <span class="skill-html"><i class="fab fa-html5"></i> HTML</span>
-                <span class="skill-css"><i class="fab fa-css3-alt"></i> CSS</span>
-                <span class="skill-js"><i class="fab fa-js-square"></i> JavaScript</span>
-                <span class="skill-python"><i class="fab fa-python"></i> Python</span>
-                <span class="skill-java"><i class="fab fa-java"></i> Java</span>
-                <span class="skill-db"><i class="fas fa-database"></i> Banco de Dados</span>
-                <span class="skill-git"><i class="fas fa-code"></i> Git </span>
-                <span class="skill-github"><i class="fas fa-code-branch"></i> GitHub</span>
+                <div class="skill-card">
+                    <span class="skill-icon">☕</span>
+                    <span class="skill-name">Java</span>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-icon">☁️</span>
+                    <span class="skill-name">AWS</span>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-icon">📱</span>
+                    <span class="skill-name">Mobile</span>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-icon">🔐</span>
+                    <span class="skill-name">Cybersecurity</span>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-icon">⚛️</span>
+                    <span class="skill-name">React</span>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-icon">🤖</span>
+                    <span class="skill-name">AI Solutions</span>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-icon">📊</span>
+                    <span class="skill-name">TypeScript</span>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-icon">🗄️</span>
+                    <span class="skill-name">Databases</span>
+                </div>
             </div>
         </section>
 
-        <section id="projetos">
-            <h2>Meus Projetos</h2>
-            <div class="cards-container">
-                <article class="card">
-                    <h3>Base das Linguagens - Projeto da Imersão Dev Alura + Google</h3>
-                    <div class="project-tags">
-                        <span class="language-tag lang-html">HTML</span>
-                        <span class="language-tag lang-css">CSS</span>
-                        <span class="language-tag lang-js">JavaScript</span>
+        <!-- SEÇÃO TRAJETÓRIA -->
+        <section id="trajetoria">
+            <h2>Experiência & <span style="color: var(--accent-color);">Formação</span></h2>
+            
+            <div class="timeline">
+                <!-- Formação -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Fev/2026 – Jun/2028</div>
+                        <div class="timeline-title">Análise e Desenvolvimento de Sistemas</div>
+                        <div class="timeline-description">
+                            Universidade São Judas Tadeu — Graduação em ADS com foco em desenvolvimento mobile e sistemas de software.
+                        </div>
                     </div>
-                    <p>Desenvolvi um site voltado para iniciantes em programação, permitindo pesquisar diferentes linguagens e visualizar rapidamente suas principais características. O projeto inclui um sistema de busca, informações organizadas de forma clara e um gráfico de popularidade das linguagens, que facilita a comparação entre elas.
+                </div>
 
-O objetivo foi criar uma ferramenta simples, funcional e acessível para quem está começando na área, reforçando minhas habilidades em HTML, CSS, JavaScript, lógica de programação e organização de dados.</p>
-                    <a href="https://almeidanilton.github.io/projeto-imersao-alura-2025/" target="_blank" rel="noopener noreferrer" aria-label="Ver o projeto Base das Linguagens - Projeto da Imersão Dev Alura + Google">Ver Projeto</a>
-                </article>
-                <article class="card">
-                    <h3>Odonto+ — Sistema de Agendamento</h3>
-                    <div class="project-tags">
-                        <span class="language-tag lang-html">HTML</span>
-                        <span class="language-tag lang-css">CSS</span>
-                        <span class="language-tag lang-js">JavaScript</span>
+                <!-- Trabalho Atual -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Set/2025 – Atualmente</div>
+                        <div class="timeline-title">Cadista Sênior / Técnico em Prótese Dentária</div>
+                        <div class="timeline-description">
+                            Laboratório New Star — Operação de softwares CAD/CAM, resolução de problemas técnicos e migração de processos manuais para o ambiente digital.
+                        </div>
                     </div>
-                    <p>O Odonto+ é um site que desenvolvi para permitir que pacientes agendem consultas odontológicas de forma simples e rápida. Nele, a pessoa escolhe o serviço, vê os horários disponíveis e já confirma o agendamento online.</p>
-                    <a href="https://almeidanilton.github.io/Odonto--Sistema-de-Agendamento-Odontologico/" target="_blank" rel="noopener noreferrer" aria-label="Ver o projeto Odonto+ — Sistema de Agendamento">Ver Projeto</a>
-                </article>
-                <article class="card">
-                    <h3>Projeto de Metas Pessoal</h3>
-                    <div class="project-tags">
-                        <span class="language-tag lang-html">HTML</span>
-                        <span class="language-tag lang-css">CSS</span>
-                        <span class="language-tag lang-js">JavaScript</span>
+                </div>
+
+                <!-- Líder de Impressão 3D -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Mai/2025 – Set/2025</div>
+                        <div class="timeline-title">Líder de Impressão 3D</div>
+                        <div class="timeline-description">
+                            Laboratório Brudent — Implementei automações em Excel que reduziram falhas de produção em 25%. Gestão de fluxos digitais e modelagem 3D com precisão milimétrica.
+                        </div>
                     </div>
-                    <p>Trata-se de um site de gerenciamento de metas pessoais, desenvolvido com HTML, CSS e JavaScript, com foco em organização, usabilidade e experiência do usuário.
-O site permite cadastrar metas, organizá-las por categorias, salvar os dados no navegador usando localStorage e concluir objetivos com feedback visual.</p>
-                    <a href="https://almeidanilton.github.io/projeto-de-metas-pessoal-/" target="_blank" rel="noopener noreferrer" aria-label="Ver o projeto de Metas pesssoal">Ver Projeto</a>
+                </div>
+
+                <!-- Técnico de Prótese -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Set/2024 – Mai/2025</div>
+                        <div class="timeline-title">Técnico de Prótese Dentária</div>
+                        <div class="timeline-description">
+                            Laboratório Kion Dental Tech — Atuação com softwares CAD/CAM e inovação em Implantes Digital.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Técnico em Prótese Dentária (Formação) -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Conclusão: Ago/2024</div>
+                        <div class="timeline-title">Técnico em Prótese Dentária</div>
+                        <div class="timeline-description">
+                            SENAC — TCC focado no planejamento de infraestrutura e integração de sistemas para laboratório 100% digital com tecnologia CAD/CAM.
+                        </div>
+                    </div>
+                </div>
             </div>
+        </section>
+
+        <!-- SEÇÃO PROJETOS -->
+        <section id="projetos">
+            <h2>O que eu <span style="color: var(--accent-color);">construí</span></h2>
+            
+            <div class="projects-container">
+                <!-- LabFlow - Projeto Principal -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-badge">
+                            <i class="fas fa-rocket"></i> Projeto em Evolução
+                        </div>
+                        <h3>LabFlow — Sistema Digital de Controle</h3>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">Vercel</span>
+                    </div>
+                    <p class="project-description">
+                        Sistema completo de controle digital para laboratórios odontológicos. Desenvolvido com React, TypeScript e Node.js, com deploy em Vercel. Gerenciamento de fluxos, agendamentos e integração com sistemas de nuvem.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/almeidanilton" target="_blank" rel="noopener noreferrer" class="project-link">
+                            <i class="fab fa-github"></i> Ver Código
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Odonto+ -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Odonto+ — Sistema de Agendamento</h3>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <p class="project-description">
+                        Sistema de agendamento online para clínicas odontológicas com foco em fluxo intuitivo, validação de dados e organização de atendimentos. Interface pensada para a experiência real do usuário.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://almeidanilton.github.io/Odonto--Sistema-de-Agendamento-Odontologico/" target="_blank" rel="noopener noreferrer" class="project-link">
+                            <i class="fas fa-external-link-alt"></i> Ver Projeto
+                        </a>
+                        <a href="https://github.com/almeidanilton/Odonto--Sistema-de-Agendamento-Odontologico" target="_blank" rel="noopener noreferrer" class="project-link project-link-secondary">
+                            <i class="fab fa-github"></i> Código
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Base das Linguagens -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Base das Linguagens — Plataforma de Aprendizado</h3>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">JSON</span>
+                    </div>
+                    <p class="project-description">
+                        Aplicação web para facilitar o aprendizado de linguagens de programação, com busca e visualização organizada de informações. Explora manipulação de dados e estruturação dinâmica de conteúdo.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://almeidanilton.github.io/projeto-imersao-alura-2025/" target="_blank" rel="noopener noreferrer" class="project-link">
+                            <i class="fas fa-external-link-alt"></i> Ver Projeto
+                        </a>
+                        <a href="https://github.com/almeidanilton/projeto-imersao-alura-2025" target="_blank" rel="noopener noreferrer" class="project-link project-link-secondary">
+                            <i class="fab fa-github"></i> Código
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Laboratório 100% Digital -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-badge">
+                            <i class="fas fa-award"></i> TCC Reconhecido
+                        </div>
+                        <h3>Laboratório 100% Digital</h3>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">CAD/CAM</span>
+                        <span class="tag">Infraestrutura</span>
+                        <span class="tag">Sistemas</span>
+                    </div>
+                    <p class="project-description">
+                        TCC — SENAC 2024. Planejamento completo de infraestrutura e integração de sistemas para eliminação de fluxos analógicos em laboratório odontológico. Projeto reconhecido como modelo de inovação digital no setor.
+                    </p>
+                    <div class="project-links">
+                        <a href="#" class="project-link project-link-secondary">
+                            <i class="fas fa-file-pdf"></i> Documentação
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Sistema de Organização de Arquivos -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Sistema de Organização Automatizada de Arquivos</h3>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">Java</span>
+                        <span class="tag">Automação</span>
+                        <span class="tag">Back End</span>
+                    </div>
+                    <p class="project-description">
+                        Sistema desenvolvido em Java para organização automática da pasta Downloads, com classificação baseada em regras e preparado para futura integração com armazenamento em nuvem. Foco em automação e escalabilidade.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/almeidanilton/cloud-ready-download-organizer" target="_blank" rel="noopener noreferrer" class="project-link">
+                            <i class="fab fa-github"></i> Ver Código
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Projeto de Metas Pessoal -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Projeto de Metas Pessoal</h3>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <p class="project-description">
+                        Site de gerenciamento de metas pessoais desenvolvido com foco em organização, usabilidade e experiência do usuário. Permite cadastrar metas, organizá-las por categorias e salvar dados com localStorage.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://almeidanilton.github.io/projeto-de-metas-pessoal-/" target="_blank" rel="noopener noreferrer" class="project-link">
+                            <i class="fas fa-external-link-alt"></i> Ver Projeto
+                        </a>
+                        <a href="https://github.com/almeidanilton/projeto-de-metas-pessoal-" target="_blank" rel="noopener noreferrer" class="project-link project-link-secondary">
+                            <i class="fab fa-github"></i> Código
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO HABILIDADES -->
+        <section id="habilidades">
+            <h2>Áreas de <span style="color: var(--accent-color);">Interesse</span></h2>
+            
+            <p style="max-width: 700px; margin: 0 auto 3rem; font-size: 1.1rem;">
+                Focado em desenvolvimento de soluções práticas que transformam ideias em produtos reais, com ênfase em performance, escalabilidade e experiência do usuário.
+            </p>
+
+            <div class="skills-container">
+                <div class="skill-card">
+                    <span class="skill-icon">📱</span>
+                    <span class="skill-name">Mobile Development</span>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-icon">☁️</span>
+                    <span class="skill-name">Cloud Computing</span>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-icon">🔒</span>
+                    <span class="skill-name">Cybersecurity</span>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-icon">🤖</span>
+                    <span class="skill-name">AI Solutions</span>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-icon">⚙️</span>
+                    <span class="skill-name">Backend Development</span>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-icon">🎨</span>
+                    <span class="skill-name">Frontend Design</span>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-icon">🔄</span>
+                    <span class="skill-name">DevOps</span>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-icon">📊</span>
+                    <span class="skill-name">Data & Analytics</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO CONTATO -->
+        <section id="contato">
+            <h2>Vamos <span style="color: var(--accent-color);">conversar</span>?</h2>
+            
+            <p style="max-width: 600px; margin: 0 auto 2rem; font-size: 1.1rem;">
+                Estou aberto a oportunidades de estágio, projetos colaborativos e conversas sobre tecnologia. Entre em contato!
+            </p>
+
+            <div class="hero-social" style="margin-bottom: 2rem;">
+                <a href="mailto:almeidanilton555@gmail.com" class="social-link" title="Email" style="width: 60px; height: 60px; font-size: 1.5rem;">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://github.com/almeidanilton" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub" style="width: 60px; height: 60px; font-size: 1.5rem;">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/jos%C3%A9-nilton-a1b8b6280/" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn" style="width: 60px; height: 60px; font-size: 1.5rem;">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.instagram.com/_jniltonn/" target="_blank" rel="noopener noreferrer" class="social-link" title="Instagram" style="width: 60px; height: 60px; font-size: 1.5rem;">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+
+            <p style="color: var(--text-tertiary); font-size: 0.95rem;">
+                <a href="mailto:almeidanilton555@gmail.com" style="color: var(--accent-color); text-decoration: none; font-weight: 600;">almeidanilton555@gmail.com</a>
+            </p>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
-        <p>© 2026 - José Nilton.</p>
+        <p>© 2026 — José Nilton. Desenvolvedor em Formação.</p>
         <ul>
-            <li><a href="https://www.linkedin.com/in/jos%C3%A9-nilton-a1b8b6280/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
             <li><a href="https://github.com/almeidanilton" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/jos%C3%A9-nilton-a1b8b6280/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://www.instagram.com/_jniltonn/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="mailto:almeidanilton555@gmail.com">Email</a></li>
         </ul>
     </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="three-scene.js"></script>
 </body>
 </html>
