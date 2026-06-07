@@ -7,6 +7,7 @@ let scene, camera, renderer, cube, particles;
 
 function initThreeScene() {
     const canvas = document.getElementById('canvas3d');
+    const container = canvas.parentElement;
     
     if (!canvas) return;
 
@@ -15,8 +16,8 @@ function initThreeScene() {
     scene.background = null;
 
     // Camera setup
-    const width = canvas.clientWidth;
-    const height = canvas.clientHeight;
+    const width = container.clientWidth;
+    const height = container.clientHeight;
     camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
     camera.position.z = 3;
 
@@ -126,10 +127,11 @@ function animate() {
 
 function onWindowResize() {
     const canvas = document.getElementById('canvas3d');
-    if (!canvas) return;
+    const container = canvas.parentElement;
+    if (!canvas || !container) return;
 
-    const width = canvas.clientWidth;
-    const height = canvas.clientHeight;
+    const width = container.clientWidth;
+    const height = container.clientHeight;
 
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
