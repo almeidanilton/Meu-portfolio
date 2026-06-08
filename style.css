@@ -348,7 +348,7 @@ strong { font-weight: 500; }
   transition: var(--transition);
 }
 .social-link:hover { color: var(--accent); }
-
+i
 .hero-scroll {
   position: absolute;
   bottom: 32px;
