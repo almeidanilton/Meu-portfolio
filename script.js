@@ -95,31 +95,47 @@ document.addEventListener("DOMContentLoaded", () => {
   const slides = document.querySelectorAll(".projeto-slide");
   const prevBtn = document.getElementById("prevProjeto");
   const nextBtn = document.getElementById("nextProjeto");
+  const dotsContainer = document.getElementById("sliderDots");
 
   if (track && slides.length > 0 && prevBtn && nextBtn) {
     let currentIndex = 0;
 
+    // ===== GERAR DOTS =====
+    const dots = [];
+    if (dotsContainer) {
+      slides.forEach((_, i) => {
+        const dot = document.createElement("button");
+        dot.classList.add("slider-dot");
+        dot.setAttribute("aria-label", `Ir para projeto ${i + 1}`);
+        dot.setAttribute("role", "tab");
+        dot.addEventListener("click", () => {
+          currentIndex = i;
+          updateSlider();
+        });
+        dotsContainer.appendChild(dot);
+        dots.push(dot);
+      });
+    }
+
+    const updateDots = () => {
+      dots.forEach((dot, i) => {
+        dot.classList.toggle("active", i === currentIndex);
+        dot.setAttribute("aria-selected", i === currentIndex ? "true" : "false");
+      });
+    };
+
     const updateSlider = () => {
       track.style.transform = `translateX(-${currentIndex * 100}%)`;
+      updateDots();
     };
 
     prevBtn.addEventListener("click", () => {
-      currentIndex--;
-
-      if (currentIndex < 0) {
-        currentIndex = slides.length - 1;
-      }
-
+      currentIndex = currentIndex <= 0 ? slides.length - 1 : currentIndex - 1;
       updateSlider();
     });
 
     nextBtn.addEventListener("click", () => {
-      currentIndex++;
-
-      if (currentIndex >= slides.length) {
-        currentIndex = 0;
-      }
-
+      currentIndex = currentIndex >= slides.length - 1 ? 0 : currentIndex + 1;
       updateSlider();
     });
 
@@ -138,31 +154,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     track.addEventListener("touchend", () => {
       const diff = startX - endX;
-
       if (diff > 50) {
-        currentIndex++;
-
-        if (currentIndex >= slides.length) {
-          currentIndex = 0;
-        }
-
+        currentIndex = currentIndex >= slides.length - 1 ? 0 : currentIndex + 1;
         updateSlider();
       }
-
       if (diff < -50) {
-        currentIndex--;
-
-        if (currentIndex < 0) {
-          currentIndex = slides.length - 1;
-        }
-
+        currentIndex = currentIndex <= 0 ? slides.length - 1 : currentIndex - 1;
         updateSlider();
       }
-
       startX = 0;
       endX = 0;
     });
 
+    // Inicializar
     updateSlider();
   }
 

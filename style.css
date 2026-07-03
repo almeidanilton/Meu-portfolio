@@ -119,6 +119,19 @@ strong { font-weight: 500; }
 .btn-sm { padding: 9px 18px; font-size: 13px; border-radius: 10px; }
 .btn-lg { padding: 16px 32px; font-size: 16px; }
 
+/* Botão de Download CV */
+.btn-cv {
+  background: transparent;
+  color: var(--accent);
+  border: 1.5px solid var(--border-accent);
+  font-weight: 600;
+}
+.btn-cv:hover {
+  background: var(--accent-dim);
+  transform: translateY(-2px);
+  box-shadow: 0 0 16px rgba(110,231,183,0.2);
+}
+
 /* ========================
    NAV
 ======================== */
@@ -348,7 +361,7 @@ strong { font-weight: 500; }
   transition: var(--transition);
 }
 .social-link:hover { color: var(--accent); }
-i
+
 .hero-scroll {
   position: absolute;
   bottom: 32px;
@@ -402,7 +415,7 @@ i
 
 .sobre-stats {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   margin-top: 40px;
   padding-top: 40px;
@@ -709,6 +722,50 @@ i
   gap: 10px;
   flex-wrap: wrap;
   margin-top: 8px;
+}
+
+/* Badge de WIP no projeto */
+.projeto-wip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .06em;
+  color: #fbbf24;
+  background: rgba(251,191,36,0.1);
+  border: 1px solid rgba(251,191,36,0.25);
+  padding: 5px 12px;
+  border-radius: 8px;
+  width: fit-content;
+}
+.wip-icon { font-size: 14px; }
+
+/* Dots indicadores do slider */
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+.slider-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+.slider-dot.active {
+  background: var(--accent);
+  width: 24px;
+  border-radius: 4px;
+}
+.slider-dot:hover:not(.active) {
+  background: var(--text-muted);
 }
 
 @media (max-width: 900px) {
